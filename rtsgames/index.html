@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>RTS GAMES - Official Site</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="coming-soon-notify" class="notification">COMING SOON: Stay tuned for the release!</div>
+
+    <nav class="navbar">
+        <div class="logo">RTS GAMES</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#" onclick="showComingSoon(event)">Download</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="main-logo-container">
+                <img src="IL_TUO_LOGO.png" alt="RTS Logo" class="main-logo">
+            </div>
+
+            <h1>THE WORLD IS YOUR PLAYGROUND</h1>
+            <p class="hero-subtitle">Discover the latest epic adventures available now on all platforms.</p>
+            
+            <div class="dev-description">
+                <p>Created by a solo developer, born from pure passion with the ambition to become something great.</p>
+            </div>
+
+            <div class="hero-btns">
+                <a href="#" class="btn-primary" onclick="showComingSoon(event)">PLAY NOW</a>
+                <a href="https://www.youtube.com/@rtsgames.studios" target="_blank" rel="noopener noreferrer" class="btn-secondary">WATCH TRAILER</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="games-section">
+        <div class="section-title">
+            <h2>FEATURED GAMES</h2>
+        </div>
+        <div class="games-grid">
+            <div class="game-card">
+                <div class="card-img">
+                    <img src="modern hell.png" alt="Modern Hell">
+                </div>
+                <div class="card-info">
+                    <h3>Modern Hell</h3>
+                    <p>Horror / Survival / Action</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 RTS GAMES. All rights reserved.</p>
+    </footer>
+
+   <script>
+function showComingSoon(event) {
+    event.preventDefault();
+    const notify = document.getElementById('coming-soon-notify');
+    
+    /* Inseriamo l'icona (punto esclamativo in un cerchio) e il testo */
+    notify.innerHTML = `
+        <span style="
+            display: inline-block; 
+            width: 24px; 
+            height: 24px; 
+            background: white; 
+            color: #b40000; 
+            border-radius: 50%; 
+            text-align: center; 
+            line-height: 24px; 
+            font-weight: 900; 
+            margin-right: 10px;
+        ">!</span>
+        COMING SOON: Release scheduled for late 2026
+    `;
+
+    notify.style.display = 'flex'; /* Usiamo flex per allineare icona e testo */
+    
+    setTimeout(() => {
+        notify.style.display = 'none';
+    }, 3000);
+}
+</script>
+
+</body>
+</html>
