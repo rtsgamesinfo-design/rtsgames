@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
     <title>RTS GAMES - Official Site</title>
-    
     <link rel="icon" type="image/png" href="favicon.png">
-    
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -44,6 +40,18 @@
         </div>
     </header>
 
+    <section class="news-section">
+        <div class="news-container">
+            <h2 class="news-main-title">LATEST NEWS</h2>
+            <div class="update-card">
+                <h3>DEV Update #1</h3>
+                <div class="update-body">
+                    <p><strong>Building the house:</strong> The monster's house was built with 5 rooms and an external garage. The monster chases you; he can hear your every move.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="games-section">
         <div class="section-title">
             <h2>FEATURED GAMES</h2>
@@ -65,35 +73,31 @@
         <p>&copy; 2026 RTS GAMES. All rights reserved.</p>
     </footer>
 
-   <script>
-function showComingSoon(event) {
-    event.preventDefault();
-    const notify = document.getElementById('coming-soon-notify');
-    
-    /* Inseriamo l'icona (punto esclamativo in un cerchio) e il testo */
-    notify.innerHTML = `
-        <span style="
-            display: inline-block; 
-            width: 24px; 
-            height: 24px; 
-            background: white; 
-            color: #b40000; 
-            border-radius: 50%; 
-            text-align: center; 
-            line-height: 24px; 
-            font-weight: 900; 
-            margin-right: 10px;
-        ">!</span>
-        COMING SOON: Release scheduled for late 2026
-    `;
-
-    notify.style.display = 'flex'; /* Usiamo flex per allineare icona e testo */
-    
-    setTimeout(() => {
-        notify.style.display = 'none';
-    }, 3000);
-}
-</script>
+    <script>
+    function showComingSoon(event) {
+        event.preventDefault();
+        const notify = document.getElementById('coming-soon-notify');
+        notify.innerHTML = `
+            <span style="
+                display: inline-block; 
+                width: 24px; 
+                height: 24px; 
+                background: white; 
+                color: #b40000; 
+                border-radius: 50%; 
+                text-align: center; 
+                line-height: 24px; 
+                font-weight: 900; 
+                margin-right: 10px;
+            ">!</span>
+            COMING SOON: Release scheduled for late 2026
+        `;
+        notify.style.display = 'flex';
+        setTimeout(() => {
+            notify.style.display = 'none';
+        }, 3000);
+    }
+    </script>
 
 </body>
 </html>
